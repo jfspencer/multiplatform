@@ -5,3 +5,12 @@
 - create JS distribution from KMM
 - add networking to KMM (KTor)
 - add database to KMM (SQLDelight)  
+
+
+Article on slicing frameworks to create an XCFramework
+https://medium.com/strava-engineering/convert-a-universal-fat-framework-to-an-xcframework-39e33b7bd861
+
+JS Gradle command
+core:jsBrowserWebpack 
+core:jsBrowserProductionWebpack
+core:jsBrowserDistribution

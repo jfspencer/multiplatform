@@ -3,10 +3,21 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+    id("org.jetbrains.kotlin.js") apply false
 }
 
 kotlin {
     android()
+
+    js(IR) {
+        browser {
+            binaries.executable()
+            commonWebpackConfig {
+                cssSupport.enabled = true
+                outputFileName = "main.js"
+            }
+        }
+    }
 
     val iosTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget =
         if (System.getenv("SDK_NAME")?.startsWith("iphoneos") == true)
@@ -38,6 +49,9 @@ kotlin {
         }
         val iosMain by getting
         val iosTest by getting
+
+        val jsMain by getting
+        val jsTest by getting
     }
 }
 
