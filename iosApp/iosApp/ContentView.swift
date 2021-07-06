@@ -2,7 +2,7 @@ import SwiftUI
 import core
 
 struct ContentView: View {
-	let greet = Greeting().greeting()
+	let greet = Greeting().commonGreeting() //.greeting()
 
 	var body: some View {
 		Text(greet)

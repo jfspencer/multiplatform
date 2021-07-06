@@ -6,7 +6,8 @@ import com.jfs.core.Greeting
 import android.widget.TextView
 
 fun greet(): String {
-    return Greeting().greeting()
+
+    return Greeting().commonGreeting() // Greeting().greeting()
 }
 
 class MainActivity : AppCompatActivity() {
