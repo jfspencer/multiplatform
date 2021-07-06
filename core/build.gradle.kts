@@ -10,13 +10,19 @@ kotlin {
     android()
 
     js(IR) {
+        moduleName = "CoreKMM"
         browser {
-            binaries.executable()
             commonWebpackConfig {
                 cssSupport.enabled = true
-                outputFileName = "main.js"
+                outputFileName = "core.js"
+                showProgress = true
+            }
+            webpackTask {
+                outputFileName = "mycustomfilename.js"
+                output.library = "CoreKMM"
             }
         }
+        binaries.executable()
     }
 
     val iosTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget =
