@@ -159,7 +159,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :core:embedAndSignAppleFrameworkForXcode\n";
+			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :core:embedAndSignAppleFrameworkForXcode\n\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n  xcodebuild -create-xcframework -framework core/build/xcode-frameworks/Release/iphoneos14.5/core.framework/ -output \"core.xcframework\"\nfi\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
