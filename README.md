@@ -14,3 +14,11 @@ JS Gradle command
 core:jsBrowserWebpack 
 core:jsBrowserProductionWebpack
 core:jsBrowserDistribution
+
+Async for iOS Combine:
+https://johnoreilly.dev/posts/kotlinmultiplatform-swift-combine_publisher-flow/
+
+Async/Await Swift KMM
+https://johnoreilly.dev/posts/swift_async_await_kotlin_coroutines/
+
+KMP-D pattern: 

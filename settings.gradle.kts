@@ -9,3 +9,4 @@ pluginManagement {
 rootProject.name = "Core"
 include(":androidApp")
 include(":core")
+includeBuild("config")
